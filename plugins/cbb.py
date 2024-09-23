@@ -1,46 +1,27 @@
-from pyrogram import Client 
+#(©)Codexbotz
+
+from pyrogram import __version__
 from bot import Bot
 from config import *
+from config import OWNER_ID
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from database.database import add_user, del_user, full_userbase, present_user
 
 @Bot.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
-    if data == "help":
+    if data == "about":
         await query.message.edit_text(
-            text=HELP_TXT.format(first=query.from_user.first_name),
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
+            text = f"<b>○ ᴏᴡɴᴇʀ : <a href='tg://user?id={OWNER_ID}'>@POWERMODOWNER</a>\n○ ᴍʏ ᴜᴘᴅᴀᴛᴇs : <a href='https://t.me/cybermatrixXtm'>ᴄʏʙᴇʀᴍᴀᴛʀɪxᴛᴍ</a>\n○ ᴍᴏᴠɪᴇs ᴜᴘᴅᴀᴛᴇs : <a href='https://t.me/powermoviespage'>ᴘᴏᴡᴇʀ ᴍᴏᴠɪᴇs</a>\n○ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ : <a href='https://t.me/POWERVIPMOD'>ᴘᴏᴡᴇʀ ᴍᴏᴅs</a>\n○ ᴄʜᴀᴛ ɢʀᴏᴜᴘ : <a href='https://t.me/simplebuddys'>sɪᴍᴘʟᴇ ʙᴜᴅᴅʏs</a></b>",
+            disable_web_page_preview = True,
+            reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
-                        InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data='close')
+                    InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data = "close"),
+                    InlineKeyboardButton('🍁 Backup', url='https://t.me/viral_heartbeats')
                     ]
                 ]
             )
         )
-    elif data == "about":
-        await query.message.edit_text(
-            text=ABOUT_TXT.format(first=query.from_user.first_name),
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
-                     InlineKeyboardButton('ᴄʟᴏꜱᴇ', callback_data='close')]
-                ]
-            )
-        )
-    elif data == "start":
-        await query.message.edit_text(
-            text=START_MSG.format(first=query.from_user.first_name),
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("ʜᴇʟᴘ", callback_data='Premium'),
-                 InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data='about')]
-            ])
-        )
-    
     elif data == "close":
         await query.message.delete()
         try:
