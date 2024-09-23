@@ -76,12 +76,16 @@ async def start_command(client: Client, message: Message):
                 await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
             except:
                 pass
-        return
+                return
     else:
-        reply_markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton("• ʜᴇʟᴘ •", callback_data='help'),
-             InlineKeyboardButton("• ᴀʙᴏᴜᴛ •", callback_data='about')]
-        ])
+        reply_markup = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("⚡️ ᴀʙᴏᴜᴛ", callback_data = "about"),
+                    InlineKeyboardButton('🍁 ᴘʀᴇᴍɪᴜᴍ ', url='https://t.me/+5_3Ni0VGjlg2YmQ1')
+                ]
+            ]
+                )
         await message.reply_photo(
             photo= START_PIC,
             caption= START_MSG.format(
