@@ -24,11 +24,11 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "5904478052"))
 #Port
 PORT = os.environ.get("PORT", "8054")
 #Database
-DB_URI = os.environ.get("DATABASE_URL", "")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Power123:34790@cluster0.fwoxo.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002028010489"))
-FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002028010489"))
+FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002220798354"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -58,7 +58,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" el
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!"
+USER_REPLY_TEXT = "Hᴍᴍ! Dᴏɴ'ᴛ ᴍᴇssᴀɢᴇ ᴍᴇ❌ I ᴅɪᴅɴ'ᴛ ʀᴇᴘʟʏ ʏᴏᴜ🤐"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(5191566338)
