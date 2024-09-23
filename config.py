@@ -22,7 +22,7 @@ OWNER = os.environ.get("OWNER", "POWEROWNER")
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "5904478052"))
 #Port
-PORT = os.environ.get("PORT", "8080")
+PORT = os.environ.get("PORT", "8054")
 #Database
 DB_URI = os.environ.get("DATABASE_URL", "")
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
