@@ -11,7 +11,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ ᴏᴡɴᴇʀ : <a href='tg://user?id={OWNER_ID}'>@POWERMODOWNER</a>\n○ ᴍʏ ᴜᴘᴅᴀᴛᴇs : <a href='https://t.me/cybermatrixXtm'>ᴄʏʙᴇʀᴍᴀᴛʀɪxᴛᴍ</a>\n○ ᴍᴏᴠɪᴇs ᴜᴘᴅᴀᴛᴇs : <a href='https://t.me/powermoviespage'>ᴘᴏᴡᴇʀ ᴍᴏᴠɪᴇs</a>\n○ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ : <a href='https://t.me/POWERVIPMOD'>ᴘᴏᴡᴇʀ ᴍᴏᴅs</a>\n○ ᴄʜᴀᴛ ɢʀᴏᴜᴘ : <a href='https://t.me/simplebuddys'>sɪᴍᴘʟᴇ ʙᴜᴅᴅʏs</a></b>",
+            text = f"<b>○ ᴏᴡɴᴇʀ : <a href='tg://user?id={OWNER_ID}'>POWER OWNER</a>\n○ ᴍʏ ᴜᴘᴅᴀᴛᴇs : <a href='https://t.me/cybermatrixXtm'>ᴄʏʙᴇʀᴍᴀᴛʀɪxᴛᴍ</a>\n○ ᴍᴏᴠɪᴇs ᴜᴘᴅᴀᴛᴇs : <a href='https://t.me/powermoviespage'>ᴘᴏᴡᴇʀ ᴍᴏᴠɪᴇs</a>\n○ ᴘʀᴇᴍɪᴜᴍ ᴍᴏᴅs : <a href='https://t.me/+JjTNgj4J3_NkMWM1'>ᴘᴏᴡᴇʀ ᴍᴏᴅs</a>\n○ ᴄʜᴀᴛ ɢʀᴏᴜᴘ : <a href='https://t.me/simplebuddys'>sɪᴍᴘʟᴇ ʙᴜᴅᴅʏs</a></b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
