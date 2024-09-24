@@ -79,8 +79,8 @@ async def start_command(client: Client, message: Message):
         return
     else:
         reply_markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton("• close •", callback_data='close'),
-             InlineKeyboardButton("• ᴀʙᴏᴜᴛ •", callback_data='about')]
+            [InlineKeyboardButton("⚡️ ᴀʙᴏᴜᴛ", callback_data='about'),
+             InlineKeyboardButton("🍁 ᴘʀᴇᴍɪᴜᴍ", url='https://t.me/+5_3Ni0VGjlg2YmQ1')]
         ])
         await message.reply_photo(
             photo= START_PIC,
